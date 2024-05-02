@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'intelone-mono-font-family-regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+::selection {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 100, 240);
+}
+.outer {
+  width: 100vw;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 3em;
+  background-color: rgb(234, 234, 234);
+  box-shadow: rgb(185, 246, 124) 7px 7px 0px;
+}
+.title {
+  margin-top: -30px;
+  margin-bottom: 50px;
+  color: rgb(255, 255, 255);
+  font-family: "Ojuju", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: normal;
+  text-align: right;
+  text-shadow: rgb(177, 177, 177) 1px 1px 0px;
+}
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(111, 111, 111);
+  font-family: "intelone-mono-font-family-regular", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: rgb(0, 100, 240);
+}
+.input-area input {
+  background-color: transparent;
+  position: absolute;
+  width: 50vw;
+  margin-bottom: 30px;
+  padding-left: 5px;
+  transition: all 0.5s ease;
+}
+.input-area div {
+  position: absolute;
+  font-family: "intelone-mono-font-family-regular", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  padding-left: 5px;
+  color: rgb(0, 100, 240);
+  transition: all 0.5s ease;
+}
+#input-box:focus ~ div,
+#input-box:valid ~ div {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: rgb(123, 123, 123);
+}
+#over-input:hover{
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: rgb(123, 123, 123);
+}
+#add-button {
+  position: relative;
+  left: 50.3vw;
+  top: -5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.tab-bar {
+  border-bottom: 1px solid rgb(77, 77, 77);
+  font-size: 13px;
+  cursor: pointer;
+  color: rgb(77, 77, 77);
+}
+.tab-bar row {
+  display: grid;
+}
+.tab {
+  display: flex;
+  column-gap: 3vw;
+  position: relative;
+  top: 15px;
+  padding: 1em;
+}
+.tab div {
+  text-align: center;
+  white-space: nowrap;
+  font-family: "intelone-mono-font-family-regular", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+#under-line {
+  position: absolute;
+  background-color: rgb(77, 77, 77);
+  height: 5px;
+  width: 0px;
+  top: 0px;
+  transition: all 0.7s ease
+}
+#under-line-mini {
+  position: absolute;
+  background-color: rgb(77, 77, 77);
+  height: 5px;
+  width: 0px;
+  top: 0px;
+  transition: all 0.7s ease
+}
+.task-list {
+  display: flex;
+  justify-content: space-between;
+  line-height: 34px;
+  height: 35px;
+  font-family: "intelone-mono-font-family-regular", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgb(0, 100, 240);
+  border-bottom: 1px dashed rgb(111, 111, 111);
+  cursor: pointer;
+}
+.task-with-icons{
+  display: flex;
+}
+.task-left {
+  display: flex;
+  column-gap: 7px;
+  margin-left: 5px;
+}
+.task-center {
+  margin-left: 15px;
+  margin-right: 0px;
+}
+.task-right {
+  display: flex;
+  column-gap: 7px;
+  margin-right: 5px;
+}
+.done{
+  text-decoration: line-through;
+  color: rgb(180, 180, 180);
+  background-color: rgb(222, 222, 222);
+}
+#restore {
+  margin-left: 5px;
+}
+#delete2 {
+  margin-right: 5px;
+}
+.attribution {
+  color: rgb(150, 150, 150);
+  font-family: "intelone-mono-font-family-regular", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width:600px) {
+  .title {
+    font-size: 25px;
+  }
+  .blank {
+    pointer-events: none;
+    width: 70vw;
+  }
+  .tab-bar div {
+    margin-bottom: 7px;
+    margin-right: 5px;
+  }
+  .tab-bar p{
+    display: none;
+  }
+  #under-line {
+    display: none;
+  }
+  .task-content {
+    font-size: 12px
+  }
+}
+@media (min-width:600px) {
+  .blank {
+    pointer-events: none;
+    width: 70vw;
+  }
+  #under-line-mini {
+    display: none;
+  }
+  .tab-bar img {
+    display: none;
+  }
+}
