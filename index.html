@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TO DO list</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,33 +11,49 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Ojuju:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="outer-container">
+    <div class="outer">
       <div class="container">
-        <div class="title">let's get them done!</div>
+        <div class="title">TO DO list</div>
         <div class="input-area">
           <input id="input-box" required />
           <div id="over-input">add a new task to do</div>
           <img src="image/add.png" width="25px" id="add-button"></img>
         </div>
-        <div class="tab-bar row">
-
-          <div class="tab col-12">
-            <div id="under-line"></div>
-            <div id="under-line-mini"></div>
-            <div id="tab-default"><img id="tab-all-img" src="image/list.png" width="20px"/><p id="tab-all">all</p></div>
-            <div id="tab-fav"><img id="tab-fav-img" src="image/favorite.png" width="20px"/><p id="tab-fav">favorites</p></div>
-            <div id="tab-starred"><img id="tab-starred-img" src="image/starred.png" width="20px"/><p id="tab-starred">important</p></div>
-            <div id="tab-to-do"><img id="tab-to-do-img" src="image/to-do.png" width="20px"/><p id="tab-to-do">to do</p></div>
-            <div id="tab-completed"><img id="tab-completed-img" src="image/done.png" width="20px"/><p id="tab-completed">done</p></div>
-            <div class="blank"></div>
-            <div id="tab-trash"><img id="tab-trash-img" src="image/trash.png" width="20px"/><p id="tab-trash">trash</p></div>
+          <div class="tab row">
+            <div class="row col-11">
+              <div class="icon col-2">
+                <img id="all" src="image/list.png" width="20px"/>
+                <p id="all">all</p>
+              </div>
+              <div class="icon col-2">
+                <img id="favorites" src="image/favorite.png" width="20px"/>
+                <p id="favorites">favorites</p>
+              </div>
+              <div class="icon col-2">
+                <img id="important" src="image/starred.png" width="20px"/>
+                <p id="important">important</p>
+              </div>
+              <div class="icon col-2">
+                <img id="to do" src="image/to-do.png" width="20px"/>
+                <p id="to do">to do</p>
+              </div>
+              <div class="icon col-2">
+                <img id="done" src="image/done.png" width="20px"/>
+                <p id="done">done</p>
+              </div>
+              <div class="col-2"></div>
           </div>
-        </div>
+            <div class="icon col-1">
+              <img id="deleted" src="image/trash.png" width="20px"/>
+              <p id="deleted">deleted</p>
+            </div>
+          </div>
+
         <div id="task-board">
 
         </div>
